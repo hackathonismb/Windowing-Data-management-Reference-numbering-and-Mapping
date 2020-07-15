@@ -31,30 +31,18 @@ In particular, we can generate windows with molecular interactions represented a
 ### Problems Solved
 The current preliminary version of iCn3D has several issues. 
 
-1. It works in Chrome, but not Safari, specifically the protein-view function.
+1. After “view”, the page asks whether to leave the page. 
 
-2. After “view”, the page asks whether to leave the page. 
-
-3. When refreshing the page, the page keeps refreshing.
-
-4. Document objects in popups not available.
+2. When refreshing the page, the page keeps refreshing.
 
 Other New Features in this version:
 1. ClinVar annotationn viewing
 
 ### Installation
-1. To build the full iCn3D software, download from [this](https://github.com/ncbi/icn3d) github repo and follow the instructions.
-2. Navigate to the JupyterNotebook folder of this repo and follow the instructions.
-3. The less updated version is released [here](https://pypi.org/project/icn3dpy/).
+1. Navigate to the JupyterNotebook folder of this repo and follow the instructions to use iCn3D in Jupyter Notebook.
+2. To build the full iCn3D software, download from [this](https://github.com/ncbi/icn3d) github repo and follow the instructions.
 
 ### Testing
 You can click the arrow icon on the dialog to minimize or expand the window. The test site is [here](https://www.ncbi.nlm.nih.gov/Structure/icn3d2/full.html?divid=div0&mmdbid=6m0j&command=line+graph+interaction+pairs+%7C+!A+!E+%7C+hbonds,salt+bridge,interactions,halogen,pi-cation,pi-stacking+%7C+false+%7C+threshold+3.8+6+4+3.8+6+6;+show+selection;+add+residue+number+labels%7C%7C%7C%7B%22factor%22:%221.4817%22,%22mouseChange%22:%7B%22x%22:0,%22y%22:0%7D,%22quaternion%22:%7B%22_x%22:%220.036185%22,%22_y%22:%220.49963%22,%22_z%22:%220.078595%22,%22_w%22:%220.86191%22%7D%7D)
-
-### Future Work
-1. Move from ES5 to ES6
-2. Allow functionality in JupyterLab as well
-
-
-
 
 
