@@ -33,7 +33,7 @@ class view(object):
         self.startjs = '''<div id="%s" style="position: relative; width: %dpx; min-height: %dpx; height: auto">
         <p id="%s" style="background-color:#ffcccc;color:black">You appear to be running in JupyterLab (or JavaScript failed to load for some other reason).  You need to install the extension: <br>
         <tt>jupyter labextension install jupyterlab_3dmol</tt></p>
-        </div>\n''' % (divid,width,2*height,warnid)
+        </div>\n''' % (divid,width,height+30,warnid)
         self.startjs += '<script>\n'
         self.endjs = '</script>'
         
@@ -89,12 +89,16 @@ css1
 
         self.endjs = "});\n" + self.endjs
         
-        queryArray = q.split("=")
+        inputid='';
+        if q != '':
+            queryArray = q.split("=")
+            inputid = queryArray[0] + ": \"" + queryArray[1] + "\", "
+        
         para = para.replace("=", ":")
         para = para.replace("&", ",")
         command = unquote(command)
 
-        self.startjs += 'cfg = {divid: "%s", "%s": "%s", width: "%spx", height: "%spx", mobilemenu: 1, notebook: 1, command: \'%s\', %s};\n' % (divid, queryArray[0], queryArray[1], width, height, command, para)
+        self.startjs += 'cfg = {divid: "%s", %swidth: "%spx", height: "%spx", mobilemenu: 1, notebook: 1, command: \'%s\', %s};\n' % (divid, inputid, width, height, command, para)
 
         self.startjs += 'viewerUNIQUEID = new iCn3DUI(cfg);\n'
         
