@@ -19,11 +19,11 @@ class view(object):
             v -- version of iCn3D, e.g., v='2.17.0'
         '''
         if full == 1:
-            jsfile = 'https://www.ncbi.nlm.nih.gov/Structure/icn3d2/es5/icn3d_all_full' + v + '.js'
+            jsfile = 'https://www.ncbi.nlm.nih.gov/Structure/icn3d2/es5/icn3d_all_full' + v + '.min.js'
             css1file = 'https://www.ncbi.nlm.nih.gov/Structure/icn3d/lib/jquery-ui' + v + '.min.css'
             css2file = 'https://www.ncbi.nlm.nih.gov/Structure/icn3d/icn3d_full_ui' + v + '.css'
         else:
-            jsfile = 'https://www.ncbi.nlm.nih.gov/Structure/icn3d2/es5/icn3d_all_simple' + v + '.js'
+            jsfile = 'https://www.ncbi.nlm.nih.gov/Structure/icn3d2/es5/icn3d_all_simple' + v + '.min.js'
             css1file = 'https://www.ncbi.nlm.nih.gov/Structure/icn3d/lib/jquery-ui' + v + '.min.css'
             css2file = 'https://www.ncbi.nlm.nih.gov/Structure/icn3d/icn3d_simple_ui' + v + '.css'
         
@@ -33,7 +33,7 @@ class view(object):
         self.startjs = '''<div id="%s" style="position: relative; width: %dpx; min-height: %dpx; height: auto">
         <p id="%s" style="background-color:#ffcccc;color:black">You appear to be running in JupyterLab (or JavaScript failed to load for some other reason).  You need to install the extension: <br>
         <tt>jupyter labextension install jupyterlab_3dmol</tt></p>
-        </div>\n''' % (divid,width,height+30,warnid)
+        </div>\n''' % (divid,width,height+50,warnid)
         self.startjs += '<script>\n'
         self.endjs = '</script>'
         
