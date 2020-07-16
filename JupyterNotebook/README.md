@@ -48,7 +48,7 @@ Python (mmdbid only works in Chrome)
 
     view
 
-    view = icn3dpy.view(q='pdbid=6m0j',para='closepopup=1',command='line graph interaction pairs | !A !E | hbonds,salt bridge,interactions,halogen,pi-cation,pi-stacking | false | threshold 3.8 6 4 3.8 6 6; show selection; add residue number labels')
+    view = icn3dpy.view(q='pdbid=6m0j',command='line graph interaction pairs | !A !E | hbonds,salt bridge,interactions,halogen,pi-cation,pi-stacking | false | threshold 3.8 6 4 3.8 6 6; show selection; add residue number labels')
 
     view
 
